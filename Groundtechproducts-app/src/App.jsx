@@ -86,6 +86,13 @@ const SERVICES = [
 
 const TEAM = [
   {
+    name: "Jochen Adam-Mueller",
+    img: "/Jochen.jpg",
+    role: "Sales & Service (Europe & Africa)",
+    bio: "Senior leader from industrial/off-highway markets, unites business development, sales and after-sales into one growth engine. Jochen has built international sales teams and global distribution networks with a practical focus on what is doable. He also supports and ensures the right leadership and talent are in place for companies seeking international expansion.",
+    tags: ["Sales & Service", "Distribution", "International Growth"],
+  },
+  {
     name: "Sunil Kulkarni",
     img: "/sunil.jpg",
     role: "Market Entry (India & Europe)",
@@ -98,13 +105,6 @@ const TEAM = [
     role: "Operations & Scale (Americas)",
     bio: "Senior SCM and Operations expert who turns plans into processes that scale without chaos — aligning vision, systems, and execution to drive sustainable growth, empower high-performing teams, and transform complex operations into streamlined, data-informed engines of efficiency and impact.",
     tags: ["Operations", "Supply Chain", "Scale"],
-  },
-  {
-    name: "Jochen Adam-Mueller",
-    img: "/Jochen.jpg",
-    role: "Sales & Service (Europe & Africa)",
-    bio: "Senior leader from industrial/off-highway markets, unites business development, sales and after-sales into one growth engine. Jochen has built international sales teams and global distribution networks with a practical focus on what is doable. He also supports and ensures the right leadership and talent are in place for companies seeking international expansion.",
-    tags: ["Sales & Service", "Distribution", "International Growth"],
   },
 ];
 
@@ -367,8 +367,8 @@ export default function App() {
                 src="GroundTechProducts-02.jpg"
                 alt="Ground Tech Products"
                 style={{
-                  height: 56,
-                  width: 56,
+                  height: 65,
+                  width: 65,
                   display: "block",
                 }}
               />
@@ -483,40 +483,87 @@ export default function App() {
               </div>
             </div>
 
-            <div style={{ flex: 0.9, position: "relative" }}>
-              <div style={{
-                borderRadius: 24, overflow: "hidden",
-                border: "1px solid rgba(180,200,220,0.15)",
-                boxShadow: "0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04)",
-                position: "relative",
-              }}>
-                <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=900&auto=format&fit=crop"
-                  alt="Off-highway construction excavator on job site"
-                  style={{ width: "100%", display: "block", aspectRatio: "4/3", objectFit: "cover" }}
-                />
-                <div style={{
-                  position: "absolute", inset: 0,
-                  background: "linear-gradient(135deg, rgba(6,9,31,0.6) 0%, transparent 60%)",
-                  pointerEvents: "none",
-                }} />
-                <div style={{
-                  position: "absolute", bottom: 20, right: 20,
-                  background: "rgba(6,9,18,0.85)", backdropFilter: "blur(12px)",
-                  border: "1px solid rgba(180,200,220,0.3)",
-                  borderRadius: 14, padding: "12px 18px",
-                }}>
-                  <div style={{ fontSize: 12, color: "rgba(180,195,215,0.9)", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>Locations</div>
-                  <div style={{ fontSize: 13, color: "#fff", marginTop: 4 }}>Ireland · India · Germany · USA</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            <div style={{
+			  borderRadius: 24,
+			  overflow: "hidden",
+			  border: "1px solid rgba(180,200,220,0.15)",
+			  boxShadow: "0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04)",
+			  width: "100%",
+			  maxWidth: 500,
+			  position: "relative", // important for absolute positioning
+			}}>
+			  <div style={{
+			  position: "relative",
+			  borderRadius: 24,
+			  overflow: "hidden",
+			  boxShadow: "0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05)",
+			  fontFamily: "'Inter', sans-serif"
+			}}>
+			  <div style={{
+			  position: "relative",
+			  borderRadius: 24,
+			  overflow: "hidden",
+			  boxShadow: "0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05)",
+			  fontFamily: "'Inter', sans-serif"
+			}}>
+		  {/* Image */}
+		  <img
+			src="Offhighway equipments image.png"
+			alt="Off-highway construction excavator on job site"
+			style={{
+			  maxWidth: "9 00px", // image won’t get bigger than 900px
+			  width: "100%",
+			  display: "block",
+			  aspectRatio: "4/3",
+			  objectFit: "cover"
+			}}
+		  />
+
+		  {/* Gradient Overlay */}
+		  <div style={{
+			position: "absolute",
+			inset: 0,
+			background: "linear-gradient(135deg, rgba(6,9,31,0.3) 0%, rgba(6,9,31,0) 70%)",
+			pointerEvents: "none"
+		  }} />
+
+		  {/* Smaller Locations Box */}
+		  <div style={{
+			position: "absolute",
+			bottom: 15,       // slightly closer to bottom
+			left: 15,         // slightly closer to left
+			background: "rgba(6,9,18,0.85)",
+			backdropFilter: "blur(10px)",
+			border: "1px solid rgba(180,200,220,0.25)",
+			borderRadius: 10,
+			padding: "8px 12px",  // smaller padding
+			boxShadow: "0 2px 8px rgba(0,0,0,0.4)",
+			maxWidth: "180px"      // smaller width
+		  }}>
+			<div style={{
+			  fontSize: 10,        // smaller font
+			  color: "rgba(180,195,215,0.9)",
+			  fontWeight: 700,
+			  letterSpacing: "0.06em",
+			  textTransform: "uppercase"
+			}}>Locations</div>
+			<div style={{
+			  fontSize: 11,        // smaller font
+			  color: "#fff",
+			  marginTop: 2,
+			  lineHeight: 1.3
+			}}>Ireland · India · Germany · USA</div>
+		  </div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="section" style={{ background: "#0A0E28", width: "100%" }}>
+     
+	  <section id="about" className="section" style={{ background: "#0A0E28", width: "100%", paddingTop: 40, paddingBottom: 100 }}>
         <div className="container">
           <div className="grid-2" style={{ alignItems: "center", gap: 60 }}>
             <FadeIn>
@@ -572,7 +619,7 @@ export default function App() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="section" style={{ background: "#06091F", width: "100%" }}>
+      <section id="services" className="section" style={{ background: "#06091F", width: "100%" , paddingTop: 40, paddingBottom: 100 }}>
         <div className="container">
           <FadeIn>
             <div className="section-label">What We Do</div>
@@ -634,7 +681,7 @@ export default function App() {
       </section>
 
       {/* HOW WE WORK - PROCESS */}
-      <section id="process" className="section" style={{ background: "#06091F", width: "100%" }}>
+      <section id="process" className="section" style={{ background: "#06091F", width: "100%" , paddingTop: 40, paddingBottom: 100 }}>
         <div className="container">
           <FadeIn>
             <div className="section-label">Our Approach</div>
@@ -732,7 +779,7 @@ export default function App() {
       </section>
 
       {/* WHY US */}
-      <section id="why" className="section" style={{ background: "#0A0E28", width: "100%" }}>
+      <section id="why" className="section" style={{ background: "#0A0E28", width: "100%" , paddingTop: 40, paddingBottom: 100 }}>
         <div className="container">
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: 56 }}>
@@ -765,7 +812,7 @@ export default function App() {
       </section>
 
       {/* TEAM */}
-      <section id="team" className="section" style={{ background: "#06091F", width: "100%" }}>
+      <section id="team" className="section" style={{ background: "#06091F", width: "100%" , paddingTop: 40, paddingBottom: 100 }}>
         <div className="container">
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: 56 }}>
@@ -821,7 +868,7 @@ export default function App() {
       </section>
 
       {/* PARTNERS */}
-      <section id="partners" className="section" style={{ background: "#0A0E28", width: "100%" }}>
+      <section id="partners" className="section" style={{ background: "#0A0E28", width: "100%" , paddingTop: 40, paddingBottom: 100 }}>
         <div className="container" style={{ textAlign: "center" }}>
           <FadeIn>
             <div className="section-label">Partners</div>
@@ -842,7 +889,7 @@ export default function App() {
       </section>
 
       {/* E-COMMERCE */}
-      <section id="ecommerce" className="section" style={{ background: "#06091F", width: "100%" }}>
+      <section id="ecommerce" className="section" style={{ background: "#06091F", width: "100%" , paddingTop: 40 }}>
         <div className="container">
           <div className="grid-2" style={{ gap: 60, alignItems: "center" }}>
             <FadeIn>
@@ -993,7 +1040,7 @@ export default function App() {
               style={{ height: 40, width: "auto", filter: "drop-shadow(0 0 8px rgba(64,210,170,0.3))" }}
             />
           </div>
-          <p style={{ fontSize: 12, color: "rgba(232,234,246,0.35)" }}>© 2025 Ground Tech Products Ltd. All rights reserved.</p>
+          <p style={{ fontSize: 12, color: "rgba(232,234,246,0.35)" }}>© 2026 Ground Tech Products Ltd. All rights reserved.</p>
           <div style={{ display: "flex", gap: 16 }}>
             {NAV_LINKS.slice(0, 4).map(l => (
               <a key={l.label} href={l.href} style={{ fontSize: 12, color: "rgba(232,234,246,0.45)", transition: "color 0.2s" }}
