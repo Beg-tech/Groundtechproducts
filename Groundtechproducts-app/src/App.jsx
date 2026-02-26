@@ -99,13 +99,6 @@ const TEAM = [
     bio: "Senior professional with Market Research, Business Development, and Supply Chain Management expertise. Sunil has led teams in both Indian and multinational companies within the construction equipment, automotive, and market research sectors and brings a global, results-oriented approach. With his Production Engineering and Business Intelligence & Analytics background, he combines corporate insight and entrepreneurial drive.",
     tags: ["Market Entry", "Business Development", "SCM"],
   },
-  {
-    name: "Maureen Woolshlager",
-    img: "/Maureen.jpg",
-    role: "Operations & Scale (Americas)",
-    bio: "Senior SCM and Operations expert who turns plans into processes that scale without chaos — aligning vision, systems, and execution to drive sustainable growth, empower high-performing teams, and transform complex operations into streamlined, data-informed engines of efficiency and impact.",
-    tags: ["Operations", "Supply Chain", "Scale"],
-  },
 ];
 
 const WHY = [
@@ -472,15 +465,7 @@ export default function App() {
                 <button onClick={() => scrollTo("#process")} className="btn-outline">How We Work</button>
               </div>
 
-              {/* Stats */}
-              <div style={{ display: "flex", gap: 40, marginTop: 56, paddingTop: 40, borderTop: "1px solid rgba(255,255,255,0.08)", flexWrap: "wrap" }}>
-                {[["70+", "Years Combined Experience"], ["3", "Engagement Regions"], ["3", "Core Pillars"]].map(([n, l]) => (
-                  <div key={l}>
-                    <div className="stat-number">{n}</div>
-                    <div style={{ fontSize: 12, color: "rgba(232,234,246,0.5)", marginTop: 4, fontWeight: 500, letterSpacing: "0.05em", textTransform: "uppercase" }}>{l}</div>
-                  </div>
-                ))}
-              </div>
+             
             </div>
 
             <div style={{
@@ -888,59 +873,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* E-COMMERCE */}
-      <section id="ecommerce" className="section" style={{ background: "#06091F", width: "100%" , paddingTop: 40 }}>
-        <div className="container">
-          <div className="grid-2" style={{ gap: 60, alignItems: "center" }}>
-            <FadeIn>
-              <div className="section-label">E-Commerce Platform</div>
-              <h2 className="display">Global trade,<br />simplified</h2>
-              <div className="divider" />
-              <p style={{ color: "rgba(232,234,246,0.7)", lineHeight: 1.8, marginBottom: 24 }}>
-                Our proprietary platform connects you to global buyers seeking quality industrial parts and machinery. Trusted supplier base from Korea, Japan, India, China, EU, and the US.
-              </p>
-              {["Industrial machinery & agri-equipment", "Automotive components", "Verified global suppliers & buyers", "Integrated logistics & compliance"].map((f, i) => (
-                <div key={i} style={{ display: "flex", gap: 12, marginBottom: 12, alignItems: "flex-start" }}>
-                  <span style={{ color: "rgba(180,195,215,0.9)", marginTop: 2 }}>◆</span>
-                  <span style={{ color: "rgba(232,234,246,0.75)", fontSize: 14 }}>{f}</span>
-                </div>
-              ))}
-              <div style={{ marginTop: 32 }}>
-                <span style={{
-                  display: "inline-flex", alignItems: "center", gap: 8,
-                  background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)",
-                  borderRadius: 100, padding: "8px 18px", fontSize: 12, color: "rgba(180,195,215,0.9)", fontWeight: 600,
-                }}>
-                  🚀 Platform launching soon
-                </span>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.15}>
-              <div style={{
-                background: "rgba(255,255,255,0.02)", border: "1px solid rgba(180,200,220,0.15)",
-                borderRadius: 24, overflow: "hidden",
-              }}>
-                <img
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop"
-                  alt="Global trade"
-                  style={{ width: "100%", height: 340, objectFit: "cover", display: "block" }}
-                />
-                <div style={{ padding: 28 }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-                    {[["🌏", "6+ Source Countries"], ["🏭", "3 Industry Verticals"], ["✅", "Verified Network"], ["🔒", "Compliance Built-in"]].map(([icon, label]) => (
-                      <div key={label} style={{ display: "flex", gap: 10, alignItems: "center" }}>
-                        <span style={{ fontSize: 18 }}>{icon}</span>
-                        <span style={{ fontSize: 13, color: "rgba(232,234,246,0.75)" }}>{label}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
 
       {/* CTA BANNER */}
       <section style={{
@@ -1002,7 +934,7 @@ export default function App() {
                     {["sunil@groundtechproducts.com", "jochen@groundtechproducts.com"].map(e => (
                       <a key={e} href={`mailto:${e}`} style={{ display: "block", fontSize: 13, color: "rgba(232,234,246,0.7)", marginBottom: 4 }}>{e}</a>
                     ))}
-                  </div>
+                  </div>mau
 
                   <div style={{ marginBottom: 24 }}>
                     <div style={{ fontSize: 11, fontWeight: 700, color: "rgba(210,220,235,1)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Phone</div>
@@ -1013,7 +945,7 @@ export default function App() {
 
                   <div>
                     <div style={{ fontSize: 11, fontWeight: 700, color: "rgba(210,220,235,1)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>Locations</div>
-                    {[["🇮🇪", "Dublin, Ireland"], ["🇮🇳", "Pune, India"], ["🇩🇪", "Cologne Bonn Region, Germany"], ["🇺🇸", "Colorado, United States"]].map(([flag, loc]) => (
+                    {[["🇮🇪", "Dublin, Ireland"], ["🇮🇳", "Pune, India"], ["🇩🇪", "Cologne Bonn Region, Germany"],].map(([flag, loc]) => (
                       <div key={loc} style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 10 }}>
                         <span style={{ fontSize: 18 }}>{flag}</span>
                         <span style={{ fontSize: 13, color: "rgba(232,234,246,0.7)" }}>{loc}</span>
