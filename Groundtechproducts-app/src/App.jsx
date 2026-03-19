@@ -931,19 +931,12 @@ export default function App() {
 
                   <div style={{ marginBottom: 24 }}>
                     <div style={{ fontSize: 11, fontWeight: 700, color: "rgba(210,220,235,1)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Email</div>
-                    {["sunil@groundtechproducts.com", "jochen@groundtechproducts.com"].map(e => (
+                    {["enquiry@groundtechproducts.com"].map(e => (
                       <a key={e} href={`mailto:${e}`} style={{ display: "block", fontSize: 13, color: "rgba(232,234,246,0.7)", marginBottom: 4 }}>{e}</a>
                     ))}
-                  </div>mau
-
-                  <div style={{ marginBottom: 24 }}>
-                    <div style={{ fontSize: 11, fontWeight: 700, color: "rgba(210,220,235,1)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Phone</div>
-                    <div style={{ fontSize: 13, color: "rgba(232,234,246,0.7)" }}>+49 15561235045</div>
-					<div style={{ fontSize: 13, color: "rgba(232,234,246,0.7)" }}>+353 870616658</div>
-                    <div style={{ fontSize: 13, color: "rgba(232,234,246,0.7)" }}>+91 9765044954</div>
                   </div>
 
-                  <div>
+                 <div>
                     <div style={{ fontSize: 11, fontWeight: 700, color: "rgba(210,220,235,1)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>Locations</div>
                     {[["🇮🇪", "Dublin, Ireland"], ["🇮🇳", "Pune, India"], ["🇩🇪", "Cologne Bonn Region, Germany"],].map(([flag, loc]) => (
                       <div key={loc} style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 10 }}>
